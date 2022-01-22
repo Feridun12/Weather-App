@@ -1,26 +1,31 @@
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
-function Forecastsummary(props) {
-  const { date, description, icon, temperature } = props;
+function ForecastSummary(props) {
+  const { date, temperature, description, icon } = props;
+
   return (
     <div className="forecast-summary">
-      <div className="forecast-summary_date">{date}</div>
-      <div className="forecast-summary_description">{description}</div>
-      <div className="forecast-summary_icon">{icon}</div>
-      <div className="forecast-summary_tempature">{temperature}</div>
+      <div className="forecast-summary__date">{date}</div>
+      <div className="forecast-summary__icon" data-testid="forecast-icon">
+        {icon}
+      </div>
+      <div className="forecast-summary__temperature">
+        {temperature.max}
+        &deg;C
+      </div>
+      <div className="forecast-summary__description">{description}</div>
     </div>
   );
 }
+export default ForecastSummary;
 
-Forecastsummary.propTypes = {
-  date: propTypes.number.isRequired,
-  description: propTypes.string.isRequired,
-  icon: propTypes.string.isRequired,
-  temperature: propTypes.shape({
-    min: propTypes.number,
-    max: propTypes.number,
+ForecastSummary.propTypes = {
+  date: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  temperature: PropTypes.shape({
+    min: PropTypes.number,
+    max: PropTypes.number,
   }).isRequired,
 };
-
-export default Forecastsummary;

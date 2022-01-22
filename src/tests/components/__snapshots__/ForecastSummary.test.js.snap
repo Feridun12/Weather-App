@@ -6,17 +6,26 @@ exports[`ForecastSummary renders correctly 1`] = `
     class="forecast-summary"
   >
     <div
-      class="forecast-summary_date"
-    />
+      class="forecast-summary__date"
+    >
+      1111111
+    </div>
     <div
-      class="forecast-summary_description"
-    />
+      class="forecast-summary__icon"
+      data-testid="forecast-icon"
+    >
+      stubIcon
+    </div>
     <div
-      class="forecast-summary_icon"
-    />
+      class="forecast-summary__temperature"
+    >
+      22°C
+    </div>
     <div
-      class="forecast-summary_tempature"
-    />
+      class="forecast-summary__description"
+    >
+      Stub description
+    </div>
   </div>
 </DocumentFragment>
 `;
