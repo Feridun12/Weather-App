@@ -1,16 +1,39 @@
-import React from "react";
-import propTypes from "prop-types";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
+import ForecastSummaries from "./ForecastSummaries";
+import ForecastDetails from "./ForecastDetails";
+import "../styles/App.css";
 
-function App({ location }) {
-  const { city, country } = location;
-  return <LocationDetails city={city} country={country} />;
+function App({ location, forecasts }) {
+  const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
+  const selectedForecast = forecasts.find(
+    (forecast) => forecast.date === selectedDate
+  );
+  return (
+    <div className="weather-app">
+      <LocationDetails city={location.city} country={location.country} />
+      <ForecastSummaries forecasts={forecasts} />
+      <ForecastDetails forecast={selectedForecast} />
+    </div>
+  );
 }
 
 App.propTypes = {
-  location: propTypes.shape({
-    city: propTypes.string,
-    country: propTypes.string,
+  forecasts: PropTypes.arrayOf(
+    PropTypes.shape({
+      date: PropTypes.number,
+      description: PropTypes.string,
+      icon: PropTypes.number,
+      temperature: PropTypes.shape({
+        max: PropTypes.number,
+        min: PropTypes.number,
+      }),
+    })
+  ).isRequired,
+  location: PropTypes.shape({
+    city: PropTypes.string,
+    country: PropTypes.string,
   }).isRequired,
 };
 
