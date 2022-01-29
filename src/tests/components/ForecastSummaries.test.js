@@ -5,25 +5,25 @@ import ForecastSummaries from "../../components/ForecastSummaries";
 describe("ForecastSummaries", () => {
   const validProps = [
     {
-      date: 1111111,
+      date: "Mon 31th Apr",
       description: "Stub description 1",
-      icon: "stubIcon1",
+      icon: "600",
       temperature: {
         max: 22,
         min: 12,
       },
     },
     {
-      date: 2222222,
+      date: "Mon 30th Apr",
       description: "Stub description2",
-      icon: "stubIcon2",
+      icon: "800",
       temperature: {
         max: 24,
         min: 13,
       },
     },
   ];
-  xit("renders correctly", () => {
+  it("renders correctly", () => {
     const { asFragment } = render(<ForecastSummaries forecasts={validProps} />);
     expect(asFragment()).toMatchSnapshot();
   });

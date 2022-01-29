@@ -12,27 +12,15 @@ describe("Forecast Details", () => {
       speed: 10,
       direction: "s",
     },
-    humidity: "low",
+    humidity: 30,
   };
   it("it renders correctly", () => {
-    const { asFragment } = render(
-      <ForecastDetails
-        wind={validProps.wind}
-        humidity={validProps.humidity}
-        temperature={validProps.temperature}
-      />
-    );
+    const { asFragment } = render(<ForecastDetails forecast={validProps} />);
     expect(asFragment).toMatchSnapshot();
   });
-  xit("render correct values for props", () => {
-    const { getByText } = render(
-      <ForecastDetails
-        wind={validProps.wind}
-        humidity={validProps.humidity}
-        temperature={validProps.temperature}
-      />
-    );
-    expect(getByText("30")).toHaveClass("forecast__humidity");
-    expect(getByText("22°C")).toHaveClass("forecast-summary__temperature");
+  it("render correct values for props", () => {
+    const { getByText } = render(<ForecastDetails forecast={validProps} />);
+    expect(getByText(/30/g)).toHaveClass("forecast-details_humidity");
+    expect(getByText(/22/g)).toHaveClass("forecast-details__temperature");
   });
 });
