@@ -8,13 +8,19 @@ function ForecastDetails(props) {
   return (
     <div className="forecast-details" data-testid="forecast-details">
       <div className="forecast-details__temperature">
-        {temperature.max}
-        {temperature.min}
-        &deg;C
+        <span className="forecast-details__temperature-max">
+          {temperature.max}
+        </span>
+        <span className="forecast-details__temperature-min">
+          {temperature.min}
+          &deg;C
+        </span>
       </div>
-      <div className="forecast-details_wind">
+      <div className="forecast-details_wind-speed">
         {wind.speed}
-        {wind.direction}
+        <span className="forecast-details_wind-direction">
+          {wind.direction}
+        </span>
       </div>
       <div className="forecast-details_humidity">
         {humidity}
@@ -39,34 +45,3 @@ ForecastDetails.propTypes = {
     }).isRequired,
   }).isRequired,
 };
-
-// import React from "react";
-// import PropTypes from "prop-types";
-// function ForecastDetails(props) {
-//   const forecast = props;
-//   return (
-//     <div className="forecast-details" data-testid="forecast-details">
-//       <div className="forecast-details__temperature">
-//         {forecast.temperature.min}
-//         &deg;C
-//       </div>
-//       <div className="forecast__wind-speed"> {forecast.wind.speed}</div>
-//       <div className="forecast__wind-direction">{forecast.wind.direction}</div>
-//       <div className="forecast__humidity"> {forecast.humidity}</div>
-//     </div>
-//   );
-// }
-// ForecastDetails.propTypes = {
-//   forecast: PropTypes.shape({
-//     temperature: PropTypes.shape({
-//       min: PropTypes.number,
-//       max: PropTypes.number,
-//     }).isRequired,
-//     humidity: PropTypes.number.isRequired,
-//     wind: PropTypes.shape({
-//       speed: PropTypes.number,
-//       direction: PropTypes.string,
-//     }).isRequired,
-//   }).isRequired,
-// };
-// export default ForecastDetails;
