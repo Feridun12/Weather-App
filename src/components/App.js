@@ -13,7 +13,7 @@ function App() {
   const [searchText, setSearchText] = useState("");
 
   const handleCitySearch = () => {
-    getForecast(setSelectedDate, setForecasts, setLocation);
+    getForecast(searchText, setSelectedDate, setForecasts, setLocation);
   };
 
   useEffect(() => {
@@ -32,7 +32,7 @@ function App() {
     <div className="weather-app">
       <LocationDetails city={location.city} country={location.country} />
       <SearchForm
-        onCitySelect={handleCitySearch}
+        onSubmit={handleCitySearch}
         searchText={searchText}
         setSearchText={setSearchText}
       />

@@ -12,5 +12,5 @@ import App from "../components/App";
 // });
 test("it renders correctly", () => {
   const { asFragment } = render(<App />);
-  expect(asFragment).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });
