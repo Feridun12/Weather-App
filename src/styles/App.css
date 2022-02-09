@@ -1,3 +1,18 @@
 .weather-app {
-    margin: 0 20px
-};
+    margin: 0 20px;
+    
+}
+/*Search Form design */
+div.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*H1 design */
+h1.location-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  

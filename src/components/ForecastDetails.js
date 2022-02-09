@@ -8,9 +8,6 @@ function ForecastDetails(props) {
   return (
     <div className="forecast-details" data-testid="forecast-details">
       <div className="forecast-details__temperature">
-        <span className="forecast-details__temperature-max">
-          {temperature.max}
-        </span>
         <span className="forecast-details__temperature-min">
           {temperature.min}
           &deg;C
