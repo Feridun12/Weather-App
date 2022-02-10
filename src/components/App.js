@@ -50,7 +50,7 @@ function App() {
   if (isLoading) {
     return (
       <div className="loading-effect">
-        <ScaleLoader color="black" loading={isLoading} size={40} />
+        <ScaleLoader color="black" loading={isLoading} size={50} />
       </div>
     );
   }

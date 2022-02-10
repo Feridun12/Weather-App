@@ -11,6 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body {
+background-image: url("../images/billy-huynh-v9bnfMCyKbg-unsplash.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
 
 
 

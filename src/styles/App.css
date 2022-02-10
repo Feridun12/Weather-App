@@ -9,6 +9,29 @@ div.search-form {
     align-items: center;
     margin-bottom: 20px;
 }
+
+#search-field {
+  border: 3px solid #8be0c0;
+  padding: 5px;
+  height: 10px;
+  width: 12%;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+  font-family:'Montserrat', sans-serif;
+}
+#search-btn {
+    height: 25px;
+    transition: all .5s ease;
+    color: black;
+    border: 3px solid #8be0c0;
+    font-family:'Montserrat', sans-serif;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#search-btn:hover {
+    color: red;
+    background-color: #fff;
+}
 /*H1 design */
 h1.location-details {
     display: flex;
@@ -22,10 +45,5 @@ div.loading-effect {
     align-items: center;
   }
 
-body {
-    background-image: url("../images/billy-huynh-v9bnfMCyKbg-unsplash.jpg");
-    background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
+
   
