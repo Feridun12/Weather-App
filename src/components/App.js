@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import ScaleLoader from "react-spinners/ScaleLoader";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import ForecastDetails from "./ForecastDetails";
 import getForecast from "../requests/GetForecast";
 import SearchForm from "./SearchForm";
+// styling imports
 import "../styles/App.css";
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
   const [searchText, setSearchText] = useState("");
   // eslint-disable-next-line no-unused-vars
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setLoading] = useState(true);
 
   const handleCitySearch = () => {
     getForecast(
@@ -20,7 +23,8 @@ function App() {
       setSelectedDate,
       setForecasts,
       setLocation,
-      setErrorMessage
+      setErrorMessage,
+      setLoading
     );
   };
 
@@ -30,7 +34,8 @@ function App() {
       setSelectedDate,
       setForecasts,
       setLocation,
-      setErrorMessage
+      setErrorMessage,
+      setLoading
     );
   }, []);
 
@@ -41,7 +46,15 @@ function App() {
   const handleForecastSelect = (date) => {
     setSelectedDate(date);
   };
-
+  // Loading effect
+  if (isLoading) {
+    return (
+      <div className="loading-effect">
+        <ScaleLoader color="black" loading={isLoading} size={40} />
+      </div>
+    );
+  }
+  // Loading effect
   return (
     <div className="weather-app">
       <LocationDetails
