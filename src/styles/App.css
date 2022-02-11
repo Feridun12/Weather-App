@@ -56,7 +56,25 @@ div.loading-effect {
     align-items: center;
   }
 
+/*Media queries */
 
+@media screen and (max-device-width:450px ) {
+    #search-field {
+        width: 100px;
+    }
+
+    #more-details-btn {
+        width:55px;
+    }
+
+    h1 {
+        margin-top: 50px;
+    }
+
+    div.forecast-details {
+        margin-top: 60px;
+    }
+}
 
 
 
