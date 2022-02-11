@@ -8,19 +8,28 @@ div.search-form {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 #search-field {
   border: 3px solid #8be0c0;
   padding: 5px;
-  height: 10px;
+  height: 12px;
   width: 12%;
   border-radius: 5px 5px 5px 5px;
   outline: none;
   font-family:'Montserrat', sans-serif;
+  transition: all .5s ease;
+  margin-right: 20px;
 }
+
+#search-field:hover {
+    background-color: #fff;
+    border: 1px solid white;
+}
+
 #search-btn {
-    height: 25px;
+    height: 28px;
     transition: all .5s ease;
     color: black;
     border: 3px solid #8be0c0;
@@ -29,21 +38,26 @@ div.search-form {
 }
 
 #search-btn:hover {
-    color: red;
+    color: #8be0c0;
     background-color: #fff;
+    border: 1px solid white;
 }
 /*H1 design */
 h1.location-details {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 40px;
 }
-
+/*H1 design */
 div.loading-effect {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+
+
 
 
   

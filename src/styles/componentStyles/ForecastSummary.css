@@ -1,0 +1,20 @@
+* {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#more-details-btn {
+    transition: all .5s ease;
+    color: black;
+    border: 3px solid #8be0c0;
+    font-family:'Montserrat', sans-serif;
+    border-radius: 5px 5px 5px 5px;
+}
+#more-details-btn:hover {
+    color: #8be0c0;
+    background-color: #fff;
+    border: 1px solid white;
+}
+
+.forecast-summary__icon {
+  font-size: 40px;  
+}

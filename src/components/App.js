@@ -73,6 +73,7 @@ function App() {
             forecasts={forecasts}
             onForecastSelect={handleForecastSelect}
           />
+
           {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
         </>
       )}
