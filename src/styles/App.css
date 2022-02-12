@@ -43,14 +43,14 @@ div.search-form {
     border: 1px solid white;
 }
 /*H1 design */
-h1.location-details {
+.location-details {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
 }
 /*H1 design */
-div.loading-effect {
+.loading-effect {
     display: flex;
     justify-content: center;
     align-items: center;
